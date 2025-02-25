@@ -37,6 +37,23 @@ button {
   border: 0;
 }
 
+/* Common */
+.section {
+  margin-top: 200px;
+}
+
+.title {
+  font-size: 32px;
+}
+
+.point-text {
+  font-size: 20px;
+}
+
+.text {
+  font-size: 16px;
+}
+
 /* Header */
 .header-box {
   display: flex;
@@ -47,6 +64,7 @@ button {
   background-color: var(--color-secondary);
   position: fixed;
   top: 0;
+  z-index: 2;
 }
 
 .header {
@@ -58,6 +76,7 @@ button {
   align-items: center;
   padding: 10px 0px;
   max-width: 1320px;
+  z-index: 3;
 }
 
 .header__logo {
@@ -114,7 +133,6 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 200px;
   padding: 10px 100px;
   gap: 100px;
 }
@@ -138,17 +156,14 @@ button {
 }
 
 .home__introduce {
-  font-size: 20px;
   line-height: 1.5;
 }
 
 .home__title {
-  font-size: 32px;
   margin-top: 16px;
 }
 
 .home__text {
-  font-size: 16px;
   margin-top: 16px;
 }
 
@@ -166,7 +181,6 @@ button {
   border-radius: 25px;
   margin: 100px auto 0;
   width: fit-content;
-  font-size: 20px;
   transition: all 1s;
 }
 
