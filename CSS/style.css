@@ -3,7 +3,7 @@
   /* App Colors */
   --color-primary: var(--color-black);
   --color-accent: var(--color-blue);
-  --color-accent-variant: var(--color-gay);
+  --color-accent-variant: var(--color-gray);
   --color-secondary: var(--color-white);
 
   /* Colors */
@@ -62,6 +62,20 @@ button {
 
 .width50 {
   width: 50%;
+}
+
+.bg-blue {
+  background-color: var(--color-accent);
+  color: var(--color-secondary);
+}
+
+.bg-white {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+.display-none {
+  display: none;
 }
 
 /* Header */
@@ -377,4 +391,63 @@ button {
 .skills__box .width50:hover span {
   font-weight: 700;
   text-decoration: underline;
+}
+
+/* Projects */
+#projects {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  padding: 200px 85px;
+}
+
+.projects__text,
+.projects__title {
+  text-align: center;
+}
+
+.projects__button-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.projects__button {
+  padding: 10px 20px;
+  width: 200px;
+  border-radius: 5px;
+  margin-top: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform 1s;
+}
+
+.projects__button:hover {
+  transform: scale(1.1);
+  font-weight: 700;
+}
+
+.projects__list-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 100px;
+  gap: 50px;
+}
+
+.projects__list-box li {
+  width: 22%;
+}
+
+.projects__list-box img {
+  width: 100%;
+  transition: all 1s;
+  cursor: pointer;
+}
+
+.projects__list-box img:hover {
+  transform: scale(1.15);
+  z-index: 3;
 }
