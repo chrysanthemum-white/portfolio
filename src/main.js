@@ -10,3 +10,13 @@ document.addEventListener('scroll', () => {
     header.classList.remove('header--border-bottom');
   }
 });
+
+// Home 섹션을 아래로 스크롤시 투명하게 처리
+const homeImgBox = document.querySelector('.home__img-box');
+const homeTextBox = document.querySelector('.home__text-box');
+const homeHeight = document.querySelector('#home').offsetHeight;
+
+document.addEventListener('scroll', () => {
+  homeImgBox.style.opacity = 1 - window.scrollY / homeHeight;
+  homeTextBox.style.opacity = 1 - window.scrollY / homeHeight;
+});
