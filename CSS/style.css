@@ -89,6 +89,7 @@ button {
   position: fixed;
   top: 0;
   z-index: 2;
+  transition: all 1s;
 }
 
 .header {
@@ -150,6 +151,10 @@ button {
 .header__menu__item.active {
   font-weight: 900;
   color: var(--color-blue);
+}
+
+.header--border-bottom {
+  box-shadow: 0px 1px 50px 10px rgba(0, 0, 0, 1);
 }
 
 /* Home */
