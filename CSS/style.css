@@ -157,6 +157,18 @@ button {
   box-shadow: 0px 1px 50px 10px rgba(0, 0, 0, 1);
 }
 
+.header__toggle {
+  display: none;
+  position: absolute;
+  top: 22px;
+  right: 10px;
+  font-size: 20px;
+  background-color: var(--color-secondary);
+  cursor: pointer;
+  outline: transparent;
+  transition: all 1s;
+}
+
 /* Home */
 .home {
   display: flex;
@@ -522,6 +534,11 @@ button {
 }
 
 /* Arrow up */
+#arrow {
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+}
+
 .arrow-up {
   background-color: var(--color-primary);
   position: fixed;
@@ -606,6 +623,41 @@ button {
   font-weight: 700;
 }
 
+@media screen and (max-width: 1200px) {
+  /* Header */
+  .header {
+    width: 95%;
+  }
+
+  .header__toggle {
+    display: none;
+  }
+
+  /* About */
+  .about__box .text {
+    font-size: 12px;
+  }
+  .about__table-box {
+    width: 83%;
+  }
+
+  /* Skills */
+  .skills__box {
+    width: 90%;
+  }
+
+  /* Projects */
+  #projects {
+    padding: 200px 30px;
+  }
+  .projects__icon-box i {
+    padding: 30px;
+  }
+  .projects__list-box li {
+    width: 40%;
+  }
+}
+
 @media screen and (max-width: 768px) {
   /* Common */
   .section {
@@ -629,8 +681,24 @@ button {
     flex-direction: column;
     text-align: center;
     width: 100%;
+    display: none;
+    background-color: var(--color-secondary);
+    padding: 20px;
   }
-
+  .header__menu__item {
+    width: 90%;
+    padding: 20px;
+    border: 1px solid transparent;
+  }
+  .header__menu__item:hover {
+    border: 1px solid var(--color-primary);
+  }
+  .header__menu.open {
+    display: flex;
+  }
+  .header__toggle {
+    display: inline-block;
+  }
   /* Home */
   .home {
     padding: 10px 30px;
@@ -728,36 +796,5 @@ button {
     height: 40px;
     bottom: 20px;
     right: 20px;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  /* Header */
-  .header {
-    width: 95%;
-  }
-
-  /* About */
-  .about__box .text {
-    font-size: 12px;
-  }
-  .about__table-box {
-    width: 83%;
-  }
-
-  /* Skills */
-  .skills__box {
-    width: 90%;
-  }
-
-  /* Projects */
-  #projects {
-    padding: 200px 30px;
-  }
-  .projects__icon-box i {
-    padding: 30px;
-  }
-  .projects__list-box li {
-    width: 40%;
   }
 }
